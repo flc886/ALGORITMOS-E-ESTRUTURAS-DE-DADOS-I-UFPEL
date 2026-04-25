@@ -1,1 +1,7 @@
 .DS_Store
+bin/
+*.dSYM
+output/
+*.out
+*.exe
+a.out
