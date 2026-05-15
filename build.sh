@@ -10,7 +10,7 @@ compilar() {
     local arquivo="$1"
     local nome=$(basename "$arquivo" .c)
     echo "Compilando: $arquivo -> bin/$nome"
-    gcc "$arquivo" -o "bin/$nome"
+    gcc "$arquivo" -fsanitize=address -o "bin/$nome"
 }
 
 # Se nenhum argumento for passado, compila todos os .c do diretório atual e subdirs
